@@ -303,7 +303,7 @@ button:focus:not(:focus-visible) {
   left: -15px;
 }
 .room .hold .image  button{
-  background-color: inherit;
+  background-color: inherit !important;
   color: white;
   text-transform: capitalize;
   font-size: 18px;
@@ -560,9 +560,9 @@ button:focus:not(:focus-visible) {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
-  /* .blog .container{
+  .blog .container{
     margin-left: -16px;
-  } */
+  }
   .blog .container .box .image{
     order: 1;
   }
@@ -655,11 +655,23 @@ footer .container .box .col:nth-child(3) .subscribe input[type="email"]{
     outline: 0;
 }
 footer .container .box .col:nth-child(3) .subscribe input[type="submit"]{
-  background-color: var(--main-color);
+  background-color: var(--main-color) !important;
   color: white;
   font-size: 19px;
   border: 0;
   outline: 0;
   padding: 0 6px;
+}
+@media(max-width:768px){
+  footer .container .box .col:nth-child(3) .subscribe{
+    display: block;
+  }
+  footer .container .box .col:nth-child(3) .subscribe input[type="submit"]{
+    display: block;
+  }
+  footer .container .box .col:nth-child(3) .subscribe input[type="email"]{
+    display: block;
+    margin-bottom: 20px;
+  }
 }
 /* footer  */
